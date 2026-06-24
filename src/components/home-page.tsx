@@ -130,11 +130,7 @@ const features = [
   ["Close to Lake Karapiro", Waves],
 ];
 
-const bookedRanges = [
-  { start: "2026-07-18", end: "2026-07-21" },
-  { start: "2026-08-01", end: "2026-08-04" },
-  { start: "2026-08-14", end: "2026-08-17" },
-];
+const bookedRanges: { start: string; end: string }[] = [];
 
 const locationItems = [
   ["Cambridge Town Centre", "12 min", "Boutiques, cafes and village charm"],
@@ -149,19 +145,19 @@ const locationItems = [
 
 const reviews = [
   {
-    name: "Emma R.",
-    stay: "Family weekend",
-    text: "The home felt calm from the moment we arrived. Beautiful countryside views, generous spaces and a kitchen made for long dinners together.",
+    name: "Sarah & David",
+    stay: "Auckland",
+    text: "A truly exceptional rural retreat. We spent our mornings taking in the sweeping countryside views and our evenings relaxing in the sauna. The home is beautifully presented, incredibly spacious, and perfectly suited for larger groups. It offered the perfect balance of luxury, comfort, and privacy.",
   },
   {
-    name: "James & Olivia",
-    stay: "Wellness escape",
-    text: "The sauna after a day at Lake Karapiro was the highlight. Private, peaceful and much more polished than a normal holiday rental.",
+    name: "Emma & James",
+    stay: "Wellington",
+    text: "One of the most relaxing stays we've experienced. The home is immaculately maintained, stylishly furnished, and surrounded by stunning Waikato scenery. Every detail has been thoughtfully considered, making it ideal for families, couples, or groups looking to escape and unwind.",
   },
   {
-    name: "Sophie M.",
-    stay: "Trail riding trip",
-    text: "So close to Te Miro, with proper space to relax afterwards. Fast Wi-Fi, Sky Sport and incredibly comfortable beds.",
+    name: "Michael & Team",
+    stay: "Christchurch",
+    text: "We stayed while attending an event at Mystery Creek and couldn't have found a better location. The house exceeded our expectations, with generous living spaces, comfortable bedrooms, and breathtaking rural views. The sauna was a standout feature and the perfect way to relax after a busy day.",
   },
 ];
 
@@ -296,11 +292,10 @@ export function HomePage() {
 
     const form = event.currentTarget;
     const data = new FormData(form);
-    const params = new URLSearchParams({
-      subject: "Booking enquiry for Te Miro Luxury Rural Retreat",
-      body: `Kia ora,\n\nI would like to enquire about staying at the Te Miro luxury rural retreat.\n\nArrival: ${arrivalDate}\nDeparture: ${departureDate}\nGuests: ${data.get("guests")}\nName: ${data.get("name")}\nPhone: ${data.get("phone")}\n\nMessage:\n${data.get("message")}`,
-    });
-    window.location.href = `mailto:${contactEmail}?${params.toString()}`;
+    const subject = "Booking enquiry for Te Miro Luxury Rural Retreat";
+    const body = `Kia ora,\n\nI would like to enquire about staying at the Te Miro luxury rural retreat.\n\nArrival: ${arrivalDate}\nDeparture: ${departureDate}\nGuests: ${data.get("guests")}\nName: ${data.get("name")}\nPhone: ${data.get("phone")}\n\nMessage:\n${data.get("message")}`;
+
+    window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
 
   function handleCalendarDateClick(date: string) {
@@ -845,10 +840,14 @@ export function HomePage() {
       <section id="reviews" className="bg-[#fffaf2] py-20 sm:py-28">
         <div className="section-shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <div>
-            <p className="eyebrow">Guest reviews</p>
+            <p className="eyebrow">Reviews</p>
             <h2 className="display mt-3 text-5xl font-semibold sm:text-6xl">
-              The kind of stay people talk about on the drive home.
+              Guest Experiences
             </h2>
+            <p className="mt-6 text-lg leading-8 text-[#5a4b3d]">
+              From family getaways and cycling weekends to corporate retreats and Mystery Creek events, our guests
+              love the comfort, privacy, and stunning rural setting of our Te Miro retreat.
+            </p>
           </div>
           <div className="rounded-lg bg-[#181512] p-6 text-white shadow-2xl sm:p-9">
             <div className="mb-8 flex gap-1 text-[#d9bb8b]">
