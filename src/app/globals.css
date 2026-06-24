@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fbf7f0;
+  --foreground: #221c17;
+  --linen: #f6efe5;
+  --cream: #fffaf2;
+  --clay: #9f6f4e;
+  --olive: #6e7556;
+  --forest: #283224;
+  --charcoal: #181512;
+  --gold: #c59b62;
+  --mist: #e6e0d6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
+::selection {
+  background: rgba(197, 155, 98, 0.28);
+}
+
+.section-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.eyebrow {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.73rem;
+  font-weight: 700;
+  color: var(--clay);
+}
+
+.display {
+  font-family: var(--font-serif);
+  letter-spacing: 0;
+  line-height: 0.93;
+}
+
+.glass-panel {
+  background: rgba(255, 250, 242, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 24px 80px rgba(42, 31, 22, 0.16);
+  backdrop-filter: blur(18px);
+}
+
+.masonry {
+  column-count: 1;
+  column-gap: 16px;
+}
+
+@media (min-width: 680px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry {
+    column-count: 3;
+    column-gap: 20px;
+  }
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 1024px) {
+  .masonry-item {
+    margin-bottom: 20px;
+  }
+}
