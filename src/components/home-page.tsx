@@ -49,31 +49,9 @@ const galleryImages: GalleryImage[] = [
     tall: true,
   },
   {
-    src: "/images/king-bedroom-rural-view.jpeg",
-    alt: "King bedroom with countryside outlook",
-    category: "Bedrooms",
-  },
-  {
     src: "/images/sunroom-lounge-deck.jpeg",
     alt: "Sunlit sitting room opening to the deck",
     category: "Living",
-  },
-  {
-    src: "/images/sauna-hot-rocks.jpeg",
-    alt: "Private hot-rock sauna with timber benches",
-    category: "Sauna",
-    tall: true,
-  },
-  {
-    src: "/images/queen-bedroom-deck.jpeg",
-    alt: "Queen bedroom with direct deck access",
-    category: "Bedrooms",
-    tall: true,
-  },
-  {
-    src: "/images/rural-cows-hills.jpeg",
-    alt: "Countryside views over rolling Waikato paddocks",
-    category: "Rural views",
   },
   {
     src: "/images/kitchen-island.jpeg",
@@ -81,10 +59,9 @@ const galleryImages: GalleryImage[] = [
     category: "Kitchen",
   },
   {
-    src: "/images/bathroom-vanity-mirror.jpeg",
-    alt: "Modern bathroom vanity with round mirror",
-    category: "Bathrooms",
-    tall: true,
+    src: "/images/lounge-open-plan.jpeg",
+    alt: "Open plan lounge flowing into dining space",
+    category: "Living",
   },
   {
     src: "/images/media-lounge-sky-sport.jpeg",
@@ -93,14 +70,15 @@ const galleryImages: GalleryImage[] = [
     tall: true,
   },
   {
-    src: "/images/twin-bedroom-deck.jpeg",
-    alt: "Twin bedroom with two king single beds and deck view",
+    src: "/images/king-bedroom-rural-view.jpeg",
+    alt: "King bedroom with countryside outlook",
     category: "Bedrooms",
   },
   {
-    src: "/images/exterior-hills-blue-sky.jpeg",
-    alt: "Holiday home exterior with wide lawn and hills",
-    category: "Exterior",
+    src: "/images/queen-bedroom-deck.jpeg",
+    alt: "Sunny queen bedroom with direct deck access",
+    category: "Bedrooms",
+    tall: true,
   },
   {
     src: "/images/queen-bedroom-grey.jpeg",
@@ -108,9 +86,14 @@ const galleryImages: GalleryImage[] = [
     category: "Bedrooms",
   },
   {
-    src: "/images/laundry.jpeg",
-    alt: "Full laundry with washer and dryer",
-    category: "Laundry",
+    src: "/images/bedroom-countryside-window.jpeg",
+    alt: "Queen bedroom with countryside view through the window",
+    category: "Bedrooms",
+  },
+  {
+    src: "/images/twin-bedroom-deck.jpeg",
+    alt: "King single bedroom with two beds and deck view",
+    category: "Bedrooms",
   },
   {
     src: "/images/bathroom-shower.jpeg",
@@ -118,24 +101,31 @@ const galleryImages: GalleryImage[] = [
     category: "Bathrooms",
   },
   {
+    src: "/images/bathroom-vanity-mirror.jpeg",
+    alt: "Modern bathroom vanity with round mirror",
+    category: "Bathrooms",
+    tall: true,
+  },
+  {
     src: "/images/bathroom-shower-vanity.jpeg",
-    alt: "Compact ensuite-style shower and vanity",
+    alt: "Compact bathroom shower and vanity",
     category: "Bathrooms",
   },
   {
-    src: "/images/lounge-open-plan.jpeg",
-    alt: "Open plan lounge flowing into dining space",
-    category: "Living",
+    src: "/images/laundry.jpeg",
+    alt: "Full laundry with washer and dryer",
+    category: "Laundry",
   },
   {
-    src: "/images/dining-lounge-fireplace.jpeg",
-    alt: "Family dining space with fireplace and lounge beyond",
-    category: "Living",
+    src: "/images/rural-cows-hills.jpeg",
+    alt: "Countryside views over rolling Waikato paddocks",
+    category: "Rural views",
   },
   {
-    src: "/images/bedroom-countryside-window.jpeg",
-    alt: "Bedroom with countryside view through the window",
-    category: "Bedrooms",
+    src: "/images/sauna-hot-rocks.jpeg",
+    alt: "Private sauna with timber benches",
+    category: "Sauna",
+    tall: true,
   },
 ];
 
@@ -488,7 +478,7 @@ export function HomePage() {
           <div className="max-w-2xl">
             <p className="eyebrow">Why guests love staying here</p>
             <h2 className="display mt-3 text-5xl font-semibold sm:text-6xl">
-              Boutique-lodge comfort with the freedom of a private country home.
+              Country comfort with the freedom of a private rural home.
             </h2>
           </div>
           <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
@@ -513,15 +503,15 @@ export function HomePage() {
         <div className="section-shell">
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <div className="max-w-2xl">
-              <p className="eyebrow text-[#d9bb8b]">Stunning image gallery</p>
+              <p className="eyebrow text-[#d9bb8b]">Gallery</p>
               <h2 className="display mt-3 text-5xl font-semibold sm:text-6xl">
-                A visual story of sunlit rooms, open lawns and rural stillness.
+                Explore the Retreat
               </h2>
+              <p className="mt-6 max-w-xl text-lg leading-8 text-white/72">
+                A glimpse into the peaceful surroundings, stylish interiors, and breathtaking rural views that make
+                every stay unforgettable.
+              </p>
             </div>
-            <p className="max-w-sm text-sm leading-6 text-white/68">
-              Tap any image for a full-screen view. The gallery is grouped around the home&apos;s strongest
-              moments: exterior arrival, shared living spaces, bedrooms, kitchen, laundry and countryside outlooks.
-            </p>
           </div>
           <div className="masonry mt-12">
             {galleryImages.map((image, index) => (
@@ -552,11 +542,12 @@ export function HomePage() {
           <div className="max-w-4xl">
             <p className="eyebrow">Property overview</p>
             <h2 className="display mt-3 text-5xl font-semibold sm:text-6xl">
-              Designed for the rituals of a great weekend away.
+              Escape to the tranquillity of the Waikato countryside.
             </h2>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-[#5a4b3d]">
-              Morning coffee at the island. Long lunches around the dining table. Evenings by the television with
-              Sky Sport, or quiet conversations in the sunroom while the hills soften outside.
+              Stay just minutes from the heart of Cambridge. Spend your days exploring local cafes, boutique
+              shopping, cycling trails, and nearby attractions before returning to your private retreat to relax,
+              reconnect, and take in the sweeping rural views.
             </p>
           </div>
           <div className="mt-12 grid gap-5 md:grid-cols-3">
@@ -594,7 +585,7 @@ export function HomePage() {
         <div className="absolute inset-0 opacity-35">
           <Image
             src="/images/sauna-hot-rocks.jpeg"
-            alt="Private hot-rock sauna at Aspin Retreat"
+            alt="Private sauna at Aspin Retreat"
             fill
             sizes="100vw"
             className="object-cover"
@@ -607,13 +598,12 @@ export function HomePage() {
             <p className="eyebrow">Sauna experience</p>
             <h2 className="display mt-3 text-5xl font-semibold">Your Private Wellness Escape</h2>
             <p className="mt-6 leading-8 text-[#5a4b3d]">
-              Step into the authentic hot-rock sauna, add a little essential oil, and let the quiet of the Waikato
-              do the rest. It is the ideal reset after Cambridge market mornings, Lake Karapiro afternoons or a day
-              on the Te Miro trails.
+              Step into the private sauna, add a little essential oil, and let the quiet of the Waikato do the rest.
+              It is the ideal reset after Cambridge market mornings, Lake Karapiro afternoons or a day on the Te Miro trails.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            {["Hot-rock warmth", "Essential oils", "Peaceful rural setting", "Post-adventure recovery"].map((item) => (
+            {["Private sauna", "Essential oils", "Peaceful rural setting", "Post-adventure recovery"].map((item) => (
               <div key={item} className="rounded-lg border border-white/15 bg-white/10 p-5 backdrop-blur">
                 <Star className="mb-5 text-[#d9bb8b]" size={20} fill="currentColor" />
                 <p className="font-serif text-2xl font-semibold">{item}</p>
@@ -686,8 +676,8 @@ export function HomePage() {
             </h2>
             <p className="mt-6 text-lg leading-8 text-[#5a4b3d]">
               Set in the quiet rhythm of rural Waikato, the home balances country privacy with the comfort of a place
-              prepared with care. It is spacious enough for multi-generational stays, relaxed enough for children,
-              and refined enough for guests who want the stay itself to feel special.
+              prepared with care. It is spacious enough for group stays, relaxed enough for children, and refined
+              enough for guests who want the stay itself to feel special.
             </p>
             <p className="mt-5 text-lg leading-8 text-[#5a4b3d]">
               Days can be as gentle or as full as you like: coffee in Cambridge, rowing views at Lake Karapiro,
