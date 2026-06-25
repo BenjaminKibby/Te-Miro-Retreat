@@ -59,6 +59,12 @@ const galleryImages: GalleryImage[] = [
     category: "Living",
   },
   {
+    src: "/images/sauna-hot-rocks.jpeg",
+    alt: "Private hot-rock sauna with timber benches",
+    category: "Sauna",
+    tall: true,
+  },
+  {
     src: "/images/queen-bedroom-deck.jpeg",
     alt: "Queen bedroom with direct deck access",
     category: "Bedrooms",
@@ -73,6 +79,12 @@ const galleryImages: GalleryImage[] = [
     src: "/images/kitchen-island.jpeg",
     alt: "Large island kitchen with breakfast stools",
     category: "Kitchen",
+  },
+  {
+    src: "/images/bathroom-vanity-mirror.jpeg",
+    alt: "Modern bathroom vanity with round mirror",
+    category: "Bathrooms",
+    tall: true,
   },
   {
     src: "/images/media-lounge-sky-sport.jpeg",
@@ -99,6 +111,16 @@ const galleryImages: GalleryImage[] = [
     src: "/images/laundry.jpeg",
     alt: "Full laundry with washer and dryer",
     category: "Laundry",
+  },
+  {
+    src: "/images/bathroom-shower.jpeg",
+    alt: "Modern bathroom shower with clean white finish",
+    category: "Bathrooms",
+  },
+  {
+    src: "/images/bathroom-shower-vanity.jpeg",
+    alt: "Compact ensuite-style shower and vanity",
+    category: "Bathrooms",
   },
   {
     src: "/images/lounge-open-plan.jpeg",
@@ -184,7 +206,7 @@ const monthFormatter = new Intl.DateTimeFormat("en-NZ", {
 });
 
 const weekDays = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"];
-const contactEmail = "paulakibby@yahoo.co.nz";
+const contactEmail = "aspinretreat@gmail.com";
 const contactPhone = "027296582";
 const propertyAddress = "Aspin Road, Cambridge, Waikato, New Zealand";
 const encodedPropertyAddress = encodeURIComponent(propertyAddress);
@@ -571,8 +593,8 @@ export function HomePage() {
       <section id="wellness" className="relative bg-[#283224] py-20 text-white sm:py-28">
         <div className="absolute inset-0 opacity-35">
           <Image
-            src="/images/rural-cows-hills.jpeg"
-            alt="Rolling rural hills near the retreat"
+            src="/images/sauna-hot-rocks.jpeg"
+            alt="Private hot-rock sauna at Aspin Retreat"
             fill
             sizes="100vw"
             className="object-cover"
