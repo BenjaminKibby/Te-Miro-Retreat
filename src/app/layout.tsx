@@ -20,10 +20,9 @@ export const metadata: Metadata = {
     template: "%s | Aspin Retreat",
   },
   description:
-    "A premium five-bedroom holiday home on Aspin Road near Cambridge, Waikato with rural views, private sauna, spacious living, fast Wi-Fi, Sky Sport and easy access to Lake Karapiro and Te Miro trails.",
+    "A premium five-bedroom holiday home near Cambridge, Waikato with rural views, private sauna, spacious living, fast Wi-Fi, Sky Sport and easy access to Lake Karapiro and Te Miro trails.",
   keywords: [
     "Aspin Retreat",
-    "Aspin Road accommodation",
     "Te Miro luxury accommodation",
     "luxury accommodation Cambridge NZ",
     "Waikato holiday home",
@@ -35,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Aspin Retreat",
     description:
-      "A peaceful Aspin Road and Cambridge escape for family gatherings, wellness weekends and direct-booking rural luxury.",
+      "A peaceful Cambridge escape for family gatherings, wellness weekends and direct-booking rural luxury.",
     type: "website",
     locale: "en_NZ",
     images: [

@@ -186,7 +186,7 @@ const monthFormatter = new Intl.DateTimeFormat("en-NZ", {
 const weekDays = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"];
 const contactEmail = "paulakibby@yahoo.co.nz";
 const contactPhone = "027296582";
-const propertyAddress = "314 Aspin Road, Cambridge, Waikato, New Zealand";
+const propertyAddress = "Aspin Road, Cambridge, Waikato, New Zealand";
 const encodedPropertyAddress = encodeURIComponent(propertyAddress);
 
 function formatDate(date: string) {
@@ -228,10 +228,9 @@ const jsonLd = {
   "@type": "VacationRental",
   name: "Aspin Retreat",
   description:
-    "Premium five-bedroom rural holiday home on Aspin Road near Cambridge, Waikato with private sauna, countryside views and direct booking enquiries.",
+    "Premium five-bedroom rural holiday home near Cambridge, Waikato with private sauna, countryside views and direct booking enquiries.",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "314 Aspin Road",
     addressLocality: "Cambridge",
     addressRegion: "Waikato",
     addressCountry: "NZ",
@@ -417,7 +416,7 @@ export function HomePage() {
               transition={{ duration: 0.9, ease: "easeOut" }}
               className="max-w-4xl"
             >
-              <p className="eyebrow mb-4 text-[#f1d9ad]">Aspin Road, Cambridge, Waikato</p>
+              <p className="eyebrow mb-4 text-[#f1d9ad]">Cambridge, Waikato</p>
               <h1 className="display text-6xl font-semibold sm:text-7xl lg:text-8xl">
                 Aspin Retreat
               </h1>
@@ -616,11 +615,11 @@ export function HomePage() {
                 <div>
                   <MapPin className="mx-auto mb-4 text-[#9f6f4e]" size={34} />
                   <p className="font-serif text-2xl font-semibold text-[#221c17]">Google map loading</p>
-                  <p className="mt-2 text-sm leading-6">314 Aspin Road, Cambridge, Waikato</p>
+                  <p className="mt-2 text-sm leading-6">Near Cambridge, Waikato</p>
                 </div>
               </div>
               <iframe
-                title="Google map showing 314 Aspin Road near Cambridge Waikato"
+                title="Google map showing Aspin Road near Cambridge Waikato"
                 src={`https://maps.google.com/maps?hl=en&q=${encodedPropertyAddress}&t=&z=15&ie=UTF8&iwloc=B&output=embed`}
                 className="absolute inset-0 z-10 h-full w-full"
                 allowFullScreen
@@ -636,8 +635,8 @@ export function HomePage() {
                 Open Google Maps
               </a>
               <div className="pointer-events-none absolute inset-x-4 bottom-4 z-20 rounded-lg bg-[#fffaf2]/92 p-4 text-sm leading-6 text-[#4f4034] shadow-xl backdrop-blur">
-                <strong className="block font-serif text-xl text-[#221c17]">314 Aspin Road</strong>
-                Cambridge, Waikato, New Zealand.
+                <strong className="block font-serif text-xl text-[#221c17]">Approximate location</strong>
+                Cambridge, Waikato.
               </div>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
@@ -915,7 +914,7 @@ export function HomePage() {
           <div>
             <h2 className="font-serif text-3xl font-semibold">Aspin Retreat</h2>
             <p className="mt-4 max-w-sm text-sm leading-6 text-white/64">
-              Luxury rural accommodation on Aspin Road near Cambridge, Waikato, created for direct bookings and memorable private
+              Luxury rural accommodation near Cambridge, Waikato, created for direct bookings and memorable private
               escapes.
             </p>
           </div>
@@ -927,7 +926,7 @@ export function HomePage() {
               <Phone size={16} /> {contactPhone}
             </a>
             <a className="flex items-center gap-3 transition hover:text-[#d9bb8b]" href="#location">
-              <MapPin size={16} /> 314 Aspin Road, Cambridge, Waikato
+              <MapPin size={16} /> Cambridge, Waikato
             </a>
           </div>
           <div className="flex flex-col gap-3 lg:items-end">
