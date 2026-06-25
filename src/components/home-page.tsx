@@ -147,10 +147,10 @@ const bookedRanges: { start: string; end: string }[] = [];
 const locationItems = [
   ["Cambridge Town Centre", "12 min", "Boutiques, cafes and village charm"],
   ["Lake Karapiro", "18 min", "Rowing, water views and summer picnics"],
-  ["Te Miro Mountain Bike Park", "20 min", "Forest trails and adventure days"],
+  ["Te Miro Mountain Bike Park", "15 min", "Forest trails and adventure days"],
   ["Avantidrome", "15 min", "World-class cycling venue"],
-  ["Mystery Creek Events Centre", "28 min", "Major events and fieldays"],
-  ["Hamilton Airport", "30 min", "Easy regional access"],
+  ["Mystery Creek Events Centre", "25 min", "Major events and fieldays"],
+  ["Hamilton Airport", "23 min", "Easy regional access"],
   ["Hobbiton", "35 min", "A signature Waikato day trip"],
   ["Waikato River Trails", "30 min", "Scenic cycling and walking"],
 ];
@@ -928,7 +928,7 @@ export function HomePage() {
           <div>
             <h2 className="font-serif text-3xl font-semibold">Aspin Retreat</h2>
             <p className="mt-4 max-w-sm text-sm leading-6 text-white/64">
-              Luxury rural accommodation near Cambridge, Waikato, created for direct bookings and memorable private
+              Private rural accommodation near Cambridge, Waikato, created for direct bookings and memorable private
               escapes.
             </p>
           </div>
