@@ -596,10 +596,11 @@ export function HomePage() {
           <div className="glass-panel rounded-lg p-6 text-[#221c17] sm:p-8">
             <Flame className="mb-6 text-[#9f6f4e]" size={32} />
             <p className="eyebrow">Sauna experience</p>
-            <h2 className="display mt-3 text-5xl font-semibold">Your Private Wellness Escape</h2>
+            <h2 className="display mt-3 text-5xl font-semibold">Private sauna</h2>
             <p className="mt-6 leading-8 text-[#5a4b3d]">
-              Step into the private sauna, add a little essential oil, and let the quiet of the Waikato do the rest.
-              It is the ideal reset after Cambridge market mornings, Lake Karapiro afternoons or a day on the Te Miro trails.
+              Relax in your private hot rock sauna and enjoy a moment of complete tranquility. Whether you&apos;ve
+              spent the day exploring Cambridge, Lake Karapiro, or the Te Miro trails, it&apos;s the perfect way to
+              unwind before settling in for the evening.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -618,7 +619,7 @@ export function HomePage() {
           <div className="max-w-2xl">
             <p className="eyebrow">Location</p>
             <h2 className="display mt-3 text-5xl font-semibold sm:text-6xl">
-              Tucked into Te Miro, moments from Cambridge and Waikato adventure.
+              Nestled in the Waikato countryside, the retreat offers rural tranquility just 10 minutes from Cambridge and close to the region&apos;s top attractions.
             </h2>
           </div>
           <div className="mt-12 grid gap-6 lg:grid-cols-[1fr_1.05fr]">
@@ -670,18 +671,19 @@ export function HomePage() {
       <section className="bg-[#fbf7f0] py-20 sm:py-28">
         <div className="section-shell grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
           <div>
-            <p className="eyebrow">About the property</p>
+            <p className="eyebrow">About the Property</p>
             <h2 className="display mt-3 text-5xl font-semibold sm:text-6xl">
-              A private base for family gatherings, weekend escapes and outdoor adventure.
+              Designed to bring people together.
             </h2>
             <p className="mt-6 text-lg leading-8 text-[#5a4b3d]">
-              Set in the quiet rhythm of rural Waikato, the home balances country privacy with the comfort of a place
-              prepared with care. It is spacious enough for group stays, relaxed enough for children, and refined
-              enough for guests who want the stay itself to feel special.
+              Whether you&apos;re planning a family gathering, a weekend escape, or accommodation for a local event,
+              the retreat has been designed to bring people together. Spacious open-plan living, five comfortable
+              bedrooms, a private sauna, and generous outdoor areas provide the perfect setting to relax, reconnect,
+              and create lasting memories.
             </p>
             <p className="mt-5 text-lg leading-8 text-[#5a4b3d]">
-              Days can be as gentle or as full as you like: coffee in Cambridge, rowing views at Lake Karapiro,
-              mountain biking at Te Miro, or simply doing very little while the countryside rolls past the windows.
+              Thoughtfully renovated with modern comforts and surrounded by peaceful countryside, it&apos;s a place
+              where you can slow down, unwind, and enjoy everything the Waikato has to offer.
             </p>
           </div>
           <div className="relative min-h-[420px] overflow-hidden rounded-lg">
