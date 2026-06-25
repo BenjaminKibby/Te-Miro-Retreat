@@ -226,9 +226,9 @@ function buildCalendarMonth(monthStart: Date) {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "VacationRental",
-  name: "Te Miro Luxury Rural Retreat",
+  name: "Aspin Retreat",
   description:
-    "Premium five-bedroom rural holiday home in the Te Miro countryside near Cambridge, Waikato with private sauna, countryside views and direct booking enquiries.",
+    "Premium five-bedroom rural holiday home on Aspin Road near Cambridge, Waikato with private sauna, countryside views and direct booking enquiries.",
   address: {
     "@type": "PostalAddress",
     streetAddress: "314 Aspin Road",
@@ -292,8 +292,8 @@ export function HomePage() {
 
     const form = event.currentTarget;
     const data = new FormData(form);
-    const subject = "Booking enquiry for Te Miro Luxury Rural Retreat";
-    const body = `Kia ora,\n\nI would like to enquire about staying at the Te Miro luxury rural retreat.\n\nArrival: ${arrivalDate}\nDeparture: ${departureDate}\nGuests: ${data.get("guests")}\nName: ${data.get("name")}\nPhone: ${data.get("phone")}\n\nMessage:\n${data.get("message")}`;
+    const subject = "Booking enquiry for Aspin Retreat";
+    const body = `Kia ora,\n\nI would like to enquire about staying at Aspin Retreat.\n\nArrival: ${arrivalDate}\nDeparture: ${departureDate}\nGuests: ${data.get("guests")}\nName: ${data.get("name")}\nPhone: ${data.get("phone")}\n\nMessage:\n${data.get("message")}`;
 
     window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
@@ -343,7 +343,7 @@ export function HomePage() {
       <header className="fixed left-0 right-0 top-0 z-40 border-b border-white/15 bg-[#181512]/45 text-white backdrop-blur-xl">
         <nav className="section-shell flex h-16 items-center justify-between">
           <a href="#top" className="font-serif text-2xl font-semibold">
-            Te Miro Retreat
+            Aspin Retreat
           </a>
           <div className="hidden items-center gap-7 text-sm font-medium lg:flex">
             {["Gallery", "Wellness", "Location", "Reviews", "Book"].map((item) => (
@@ -377,7 +377,7 @@ export function HomePage() {
             exit={{ opacity: 0 }}
           >
             <div className="section-shell flex h-16 items-center justify-between">
-              <span className="font-serif text-2xl font-semibold">Te Miro Retreat</span>
+              <span className="font-serif text-2xl font-semibold">Aspin Retreat</span>
               <button
                 className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/30"
                 aria-label="Close navigation"
@@ -417,9 +417,9 @@ export function HomePage() {
               transition={{ duration: 0.9, ease: "easeOut" }}
               className="max-w-4xl"
             >
-              <p className="eyebrow mb-4 text-[#f1d9ad]">Te Miro, Cambridge, Waikato</p>
+              <p className="eyebrow mb-4 text-[#f1d9ad]">Aspin Road, Cambridge, Waikato</p>
               <h1 className="display text-6xl font-semibold sm:text-7xl lg:text-8xl">
-                Te Miro Luxury Rural Retreat
+                Aspin Retreat
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-white/88 sm:text-xl">
                 A private countryside home made for slow mornings, shared meals and unhurried Waikato escapes.
@@ -846,7 +846,7 @@ export function HomePage() {
             </h2>
             <p className="mt-6 text-lg leading-8 text-[#5a4b3d]">
               From family getaways and cycling weekends to corporate retreats and Mystery Creek events, our guests
-              love the comfort, privacy, and stunning rural setting of our Te Miro retreat.
+              love the comfort, privacy, and stunning rural setting of Aspin Retreat.
             </p>
           </div>
           <div className="rounded-lg bg-[#181512] p-6 text-white shadow-2xl sm:p-9">
@@ -913,9 +913,9 @@ export function HomePage() {
       <footer className="bg-[#181512] py-12 text-white">
         <div className="section-shell grid gap-8 lg:grid-cols-[1fr_1fr_1fr]">
           <div>
-            <h2 className="font-serif text-3xl font-semibold">Te Miro Luxury Rural Retreat</h2>
+            <h2 className="font-serif text-3xl font-semibold">Aspin Retreat</h2>
             <p className="mt-4 max-w-sm text-sm leading-6 text-white/64">
-              Te Miro luxury rural accommodation near Cambridge, Waikato, created for direct bookings and memorable private
+              Luxury rural accommodation on Aspin Road near Cambridge, Waikato, created for direct bookings and memorable private
               escapes.
             </p>
           </div>

@@ -16,12 +16,14 @@ const sans = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://waikatoruralretreat.co.nz"),
   title: {
-    default: "Te Miro Luxury Rural Retreat | Cambridge Waikato Holiday Home",
-    template: "%s | Te Miro Luxury Retreat",
+    default: "Aspin Retreat | Luxury Cambridge Waikato Holiday Home",
+    template: "%s | Aspin Retreat",
   },
   description:
-    "A premium five-bedroom holiday home in the Te Miro countryside near Cambridge, Waikato with rural views, private sauna, spacious living, fast Wi-Fi, Sky Sport and easy access to Lake Karapiro and Te Miro trails.",
+    "A premium five-bedroom holiday home on Aspin Road near Cambridge, Waikato with rural views, private sauna, spacious living, fast Wi-Fi, Sky Sport and easy access to Lake Karapiro and Te Miro trails.",
   keywords: [
+    "Aspin Retreat",
+    "Aspin Road accommodation",
     "Te Miro luxury accommodation",
     "luxury accommodation Cambridge NZ",
     "Waikato holiday home",
@@ -31,9 +33,9 @@ export const metadata: Metadata = {
     "private sauna holiday rental",
   ],
   openGraph: {
-    title: "Te Miro Luxury Rural Retreat",
+    title: "Aspin Retreat",
     description:
-      "A peaceful Te Miro and Cambridge escape for family gatherings, wellness weekends and direct-booking rural luxury.",
+      "A peaceful Aspin Road and Cambridge escape for family gatherings, wellness weekends and direct-booking rural luxury.",
     type: "website",
     locale: "en_NZ",
     images: [
