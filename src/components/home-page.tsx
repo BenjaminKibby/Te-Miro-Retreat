@@ -239,6 +239,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "VacationRental",
   name: "Aspin Retreat",
+  url: "https://aspinretreat.co.nz/",
   description:
     "Premium five-bedroom rural holiday home near Cambridge, Waikato with private sauna, countryside views and direct booking enquiries.",
   address: {
@@ -247,20 +248,25 @@ const jsonLd = {
     addressRegion: "Waikato",
     addressCountry: "NZ",
   },
-  amenityFeature: [
-    "Private sauna",
-    "Fast Wi-Fi",
-    "Sky Sport",
-    "Full laundry",
-    "Large kitchen",
-    "Countryside views",
-  ].map((name) => ({ "@type": "LocationFeatureSpecification", name, value: true })),
-  numberOfBedrooms: 5,
-  occupancy: {
-    "@type": "QuantitativeValue",
-    maxValue: 10,
+  image: galleryImages.slice(0, 8).map((image) => `https://aspinretreat.co.nz${image.src}`),
+  containsPlace: {
+    "@type": "Accommodation",
+    name: "Aspin Retreat holiday home",
+    numberOfBedrooms: 5,
+    numberOfBathroomsTotal: 2,
+    occupancy: {
+      "@type": "QuantitativeValue",
+      maxValue: 10,
+    },
+    amenityFeature: [
+      "Private sauna",
+      "Fast Wi-Fi",
+      "Sky Sport",
+      "Full laundry",
+      "Large kitchen",
+      "Countryside views",
+    ].map((name) => ({ "@type": "LocationFeatureSpecification", name, value: true })),
   },
-  image: galleryImages.slice(0, 8).map((image) => image.src),
 };
 
 export function HomePage() {
