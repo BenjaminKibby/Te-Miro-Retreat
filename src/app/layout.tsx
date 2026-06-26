@@ -14,15 +14,21 @@ const sans = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://waikatoruralretreat.co.nz"),
+  metadataBase: new URL("https://aspinretreat.co.nz"),
   title: {
-    default: "Aspin Retreat | Private Cambridge Holiday Home",
+    default: "Aspin Retreat | Cambridge Holiday Home",
     template: "%s | Aspin Retreat",
   },
   description:
-    "A premium five-bedroom holiday home near Cambridge, Waikato with rural views, private sauna, spacious living, fast Wi-Fi, Sky Sport and easy access to Lake Karapiro and Te Miro trails.",
+    "A premium five-bedroom Cambridge holiday home near Lake Karapiro, Te Miro trails and Mystery Creek, with rural views, group accommodation, private sauna, fast Wi-Fi and direct booking enquiries.",
   keywords: [
     "Aspin Retreat",
+    "luxury accommodation Cambridge Waikato",
+    "Te Miro retreat",
+    "holiday home near Lake Karapiro",
+    "accommodation near Mystery Creek",
+    "group accommodation Cambridge NZ",
+    "private sauna accommodation Waikato",
     "Te Miro luxury accommodation",
     "luxury accommodation Cambridge NZ",
     "Waikato holiday home",
@@ -34,9 +40,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Aspin Retreat",
     description:
-      "A peaceful Cambridge escape for family gatherings, wellness weekends and direct-booking rural luxury.",
+      "A peaceful Cambridge holiday home for family gatherings, local events, wellness weekends and direct-booking rural stays.",
     type: "website",
     locale: "en_NZ",
+    url: "https://aspinretreat.co.nz",
     images: [
       {
         url: "/images/exterior-tree-framed.jpeg",
@@ -45,6 +52,9 @@ export const metadata: Metadata = {
         alt: "White rural holiday home near Cambridge, Waikato",
       },
     ],
+  },
+  alternates: {
+    canonical: "https://aspinretreat.co.nz",
   },
 };
 

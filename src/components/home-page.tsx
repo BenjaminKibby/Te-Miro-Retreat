@@ -621,6 +621,11 @@ export function HomePage() {
             <h2 className="display mt-3 text-5xl font-semibold sm:text-6xl">
               Nestled in the Waikato countryside, the retreat offers rural tranquility just 10 minutes from Cambridge and close to the region&apos;s top attractions.
             </h2>
+            <p className="mt-6 text-lg leading-8 text-[#5a4b3d]">
+              Aspin Retreat is ideal for guests searching for luxury accommodation in Cambridge Waikato, group
+              accommodation in Cambridge NZ, accommodation near Mystery Creek, a holiday home near Lake Karapiro,
+              or a Te Miro retreat with private sauna accommodation in Waikato.
+            </p>
           </div>
           <div className="mt-12 grid gap-6 lg:grid-cols-[1fr_1.05fr]">
             <div className="relative min-h-[420px] overflow-hidden rounded-lg border border-[#d9cdbd] bg-[#ece4d8] shadow-sm">
@@ -928,7 +933,7 @@ export function HomePage() {
           <div>
             <h2 className="font-serif text-3xl font-semibold">Aspin Retreat</h2>
             <p className="mt-4 max-w-sm text-sm leading-6 text-white/64">
-              Private rural accommodation near Cambridge, Waikato, created for direct bookings and memorable private
+              Rural accommodation near Cambridge, Waikato, created for direct bookings and memorable
               escapes.
             </p>
           </div>
