@@ -16,7 +16,7 @@ const sans = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://waikatoruralretreat.co.nz"),
   title: {
-    default: "Aspin Retreat | Private Cambridge Waikato Holiday Home",
+    default: "Aspin Retreat | Private Cambridge Holiday Home",
     template: "%s | Aspin Retreat",
   },
   description:
