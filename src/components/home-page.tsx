@@ -226,7 +226,10 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "VacationRental",
   name: "Aspin Retreat",
+  identifier: "aspin-retreat-cambridge-waikato-nz",
   url: "https://aspinretreat.co.nz/",
+  latitude: -37.84576,
+  longitude: 175.50944,
   description:
     "Premium five-bedroom rural holiday home near Cambridge, Waikato with private sauna, countryside views and direct booking enquiries.",
   address: {
@@ -243,7 +246,7 @@ const jsonLd = {
     numberOfBathroomsTotal: 2,
     occupancy: {
       "@type": "QuantitativeValue",
-      maxValue: 10,
+      value: 10,
     },
     amenityFeature: [
       "Private sauna",
