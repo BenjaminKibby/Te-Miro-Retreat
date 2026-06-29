@@ -2,28 +2,18 @@
 
 import Image from "next/image";
 import {
-  Bath,
-  BedDouble,
-  Bike,
   CalendarDays,
   Car,
   ChevronLeft,
   ChevronRight,
   Flame,
-  Heart,
   Instagram,
   Mail,
   MapPin,
   Menu,
-  Mountain,
   Phone,
   Send,
-  Sparkles,
   Star,
-  Tv,
-  Users,
-  Waves,
-  Wifi,
   X,
 } from "lucide-react";
 import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
@@ -129,20 +119,16 @@ const galleryImages: GalleryImage[] = [
   },
 ];
 
-const features = [
-  ["Sleeps up to 10 guests", Users],
-  ["5 spacious bedrooms", BedDouble],
-  ["2 modern bathrooms", Bath],
-  ["Rural countryside views", Mountain],
-  ["Private sauna experience", Flame],
-  ["Fast Wi-Fi", Wifi],
-  ["Sky Sport entertainment", Tv],
-  ["Family friendly", Heart],
-  ["Mountain biking nearby", Bike],
-  ["Close to Lake Karapiro", Waves],
-];
-
 const bookedRanges: { start: string; end: string }[] = [];
+
+const navItems = [
+  ["About", "#property"],
+  ["Gallery", "#gallery"],
+  ["Location", "#location"],
+  ["Sauna", "#wellness"],
+  ["Reviews", "#reviews"],
+  ["Book", "#book"],
+];
 
 const locationItems = [
   ["Cambridge Town Centre", "12 min", "Boutiques, cafes and village charm"],
@@ -363,9 +349,9 @@ export function HomePage() {
             Aspin Retreat
           </a>
           <div className="hidden items-center gap-7 text-sm font-medium lg:flex">
-            {["Gallery", "Wellness", "Location", "Reviews", "Book"].map((item) => (
-              <a key={item} href={`#${item.toLowerCase()}`} className="transition hover:text-[#d9bb8b]">
-                {item}
+            {navItems.map(([label, href]) => (
+              <a key={href} href={href} className="transition hover:text-[#d9bb8b]">
+                {label}
               </a>
             ))}
           </div>
@@ -404,9 +390,9 @@ export function HomePage() {
               </button>
             </div>
             <div className="section-shell flex flex-col gap-5 py-12 font-serif text-4xl">
-              {["Gallery", "Wellness", "Location", "Reviews", "Book"].map((item) => (
-                <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setMenuOpen(false)}>
-                  {item}
+              {navItems.map(([label, href]) => (
+                <a key={href} href={href} onClick={() => setMenuOpen(false)}>
+                  {label}
                 </a>
               ))}
             </div>
@@ -467,55 +453,43 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#fffaf2] py-12 sm:py-16">
-        <div className="section-shell border-y border-[#e4d8c8] py-8">
-          <div className="grid gap-6 lg:grid-cols-[0.55fr_1.45fr] lg:items-center">
-            <p className="eyebrow">Welcome home</p>
-            <p className="font-serif text-3xl font-semibold leading-snug text-[#221c17] sm:text-4xl">
-              Step into a private rural retreat prepared for relaxed stays, shared meals and quiet moments in the
-              Waikato countryside.
+      <section id="property" className="bg-[#fffaf2] py-24 sm:py-32">
+        <div className="section-shell grid gap-12 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+          <div>
+            <p className="eyebrow">About the Property</p>
+            <h2 className="display mt-3 text-5xl font-semibold sm:text-6xl">Aspin Retreat</h2>
+            <p className="mt-7 max-w-2xl text-lg leading-8 text-[#5a4b3d]">
+              Aspin Retreat is a welcoming countryside home designed for family holidays, weekend escapes and
+              memorable time together. With five bedrooms, spacious open plan living and beautiful rural views, it
+              offers the perfect balance of comfort, privacy and convenience.
+            </p>
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-[#5a4b3d]">
+              Explore Cambridge, Lake Karāpiro, Te Miro Mountain Bike Park and Mystery Creek by day, then return to
+              shared meals, quiet evenings and the comforts of home.
             </p>
           </div>
-        </div>
-      </section>
-
-      <section className="bg-[#fbf7f0] py-20 sm:py-28">
-        <div className="section-shell">
-          <div className="max-w-2xl">
-            <p className="eyebrow">Why guests love staying here</p>
-            <h2 className="display mt-3 text-5xl font-semibold sm:text-6xl">
-              Country comfort with the freedom of a private rural home.
-            </h2>
-          </div>
-          <div className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
-            {features.map(([label, Icon], index) => (
-              <motion.div
-                key={label as string}
-                initial={{ opacity: 0, y: 18 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ delay: index * 0.035 }}
-                className="rounded-lg border border-[#e4d8c8] bg-[#fffaf2] p-4 shadow-sm"
-              >
-                <Icon className="mb-5 text-[#9f6f4e]" size={24} strokeWidth={1.7} />
-                <p className="text-sm font-semibold leading-5">{label as string}</p>
-              </motion.div>
-            ))}
+          <div className="relative min-h-[420px] overflow-hidden rounded-lg">
+            <Image
+              src="/images/exterior-hills-blue-sky.jpeg"
+              alt="White holiday home with lawn and rural hills"
+              fill
+              sizes="(min-width: 1024px) 45vw, 100vw"
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
 
-      <section id="gallery" className="bg-[#181512] py-20 text-white sm:py-28">
+      <section id="gallery" className="bg-[#181512] py-24 text-white sm:py-32">
         <div className="section-shell">
           <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <div className="max-w-2xl">
               <p className="eyebrow text-[#d9bb8b]">Gallery</p>
               <h2 className="display mt-3 text-5xl font-semibold sm:text-6xl">
-                Explore the Retreat
+                Explore Aspin Retreat
               </h2>
               <p className="mt-6 max-w-xl text-lg leading-8 text-white/72">
-                A glimpse into the peaceful surroundings, stylish interiors, and breathtaking rural views that make
-                every stay unforgettable.
+                Take a closer look at the spaces that make every stay comfortable, relaxing and memorable.
               </p>
             </div>
           </div>
@@ -543,94 +517,14 @@ export function HomePage() {
         </div>
       </section>
 
-      <section id="property" className="bg-[#fffaf2] py-20 sm:py-28">
+      <section id="location" className="bg-[#fbf7f0] py-24 sm:py-32">
         <div className="section-shell">
-          <div className="max-w-4xl">
-            <p className="eyebrow">Property overview</p>
-            <h2 className="display mt-3 text-5xl font-semibold sm:text-6xl">
-              Escape to the tranquillity of the Waikato countryside.
-            </h2>
+          <div className="max-w-3xl">
+            <h2 className="display text-5xl font-semibold sm:text-6xl">Location</h2>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-[#5a4b3d]">
-              Stay just minutes from the heart of Cambridge. Spend your days exploring local cafes, boutique
-              shopping, cycling trails, and nearby attractions before returning to your private retreat to relax,
-              reconnect, and take in the sweeping rural views.
-            </p>
-          </div>
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
-            {[
-              [
-                "Accommodation",
-                ["Sleeps up to 10 guests", "1 King bedroom", "3 Queen bedrooms", "2 King Single beds", "2 Bathrooms", "Full laundry"],
-              ],
-              [
-                "Living",
-                ["Open plan living", "Large modern kitchen", "Indoor-outdoor flow", "Family dining space", "Large TV with Sky Sport"],
-              ],
-              [
-                "Comfort",
-                ["Unlimited Wi-Fi", "Heat transfer system", "Premium furnishings", "Quality bedding", "Spacious entertaining areas"],
-              ],
-            ].map(([title, items]) => (
-              <div key={title as string} className="min-w-0 rounded-lg border border-[#e4d8c8] bg-white p-6 shadow-sm sm:p-8">
-                <h3 className="font-serif text-3xl font-semibold leading-tight text-[#221c17]">{title as string}</h3>
-                <ul className="mt-6 space-y-3 text-base leading-7 text-[#5a4b3d]">
-                  {(items as string[]).map((item) => (
-                    <li key={item} className="flex gap-3">
-                      <Sparkles className="mt-1.5 shrink-0 text-[#c59b62]" size={16} />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="wellness" className="relative bg-[#283224] py-20 text-white sm:py-28">
-        <div className="absolute inset-0 opacity-35">
-          <Image
-            src="/images/sauna-hot-rocks.jpeg"
-            alt="Private sauna at Aspin Retreat"
-            fill
-            sizes="100vw"
-            className="object-cover"
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#283224] via-[#283224]/86 to-[#283224]/55" />
-        <div className="section-shell relative grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-          <div className="glass-panel rounded-lg p-6 text-[#221c17] sm:p-8">
-            <Flame className="mb-6 text-[#9f6f4e]" size={32} />
-            <p className="eyebrow">Sauna experience</p>
-            <h2 className="display mt-3 text-5xl font-semibold">Private sauna</h2>
-            <p className="mt-6 leading-8 text-[#5a4b3d]">
-              Relax in your private hot rock sauna and enjoy a moment of complete tranquility. Whether you&apos;ve
-              spent the day exploring Cambridge, Lake Karapiro, or the Te Miro trails, it&apos;s the perfect way to
-              unwind before settling in for the evening.
-            </p>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {["Private sauna", "Essential oils", "Peaceful rural setting", "Post-adventure recovery"].map((item) => (
-              <div key={item} className="rounded-lg border border-white/15 bg-white/10 p-5 backdrop-blur">
-                <Star className="mb-5 text-[#d9bb8b]" size={20} fill="currentColor" />
-                <p className="font-serif text-2xl font-semibold">{item}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="location" className="bg-[#fbf7f0] py-20 sm:py-28">
-        <div className="section-shell">
-          <div className="max-w-2xl">
-            <p className="eyebrow">Location</p>
-            <h2 className="display mt-3 text-5xl font-semibold sm:text-6xl">
-              Nestled in the Waikato countryside, the retreat offers rural tranquility just 10 minutes from Cambridge and close to the region&apos;s top attractions.
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-[#5a4b3d]">
-              Aspin Retreat is ideal for guests searching for luxury accommodation in Cambridge Waikato, group
-              accommodation in Cambridge NZ, accommodation near Mystery Creek, a holiday home near Lake Karapiro,
-              or a Te Miro retreat with private sauna accommodation in Waikato.
+              Enjoy the peace of rural Waikato while staying just minutes from Cambridge, Lake Karāpiro, Te Miro
+              Mountain Bike Park and Mystery Creek. Whether you&apos;re here for adventure, a special occasion or a
+              peaceful escape, Aspin Retreat is the perfect base to experience the best of the region.
             </p>
           </div>
           <div className="mt-12 grid gap-6 lg:grid-cols-[1fr_1.05fr]">
@@ -679,52 +573,94 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="bg-[#fbf7f0] py-20 sm:py-28">
-        <div className="section-shell grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
-          <div>
-            <p className="eyebrow">About the Property</p>
-            <h2 className="display mt-3 text-5xl font-semibold sm:text-6xl">
-              Designed to bring people together.
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-[#5a4b3d]">
-              Whether you&apos;re planning a family gathering, a weekend escape, or accommodation for a local event,
-              the retreat has been designed to bring people together. Spacious open-plan living, five comfortable
-              bedrooms, a private sauna, and generous outdoor areas provide the perfect setting to relax, reconnect,
-              and create lasting memories.
-            </p>
-            <p className="mt-5 text-lg leading-8 text-[#5a4b3d]">
-              Thoughtfully renovated with modern comforts and surrounded by peaceful countryside, it&apos;s a place
-              where you can slow down, unwind, and enjoy everything the Waikato has to offer.
+      <section id="wellness" className="relative bg-[#283224] py-24 text-white sm:py-32">
+        <div className="absolute inset-0 opacity-35">
+          <Image
+            src="/images/sauna-hot-rocks.jpeg"
+            alt="Private sauna at Aspin Retreat"
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#283224] via-[#283224]/86 to-[#283224]/55" />
+        <div className="section-shell relative grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+          <div className="glass-panel rounded-lg p-6 text-[#221c17] sm:p-8">
+            <Flame className="mb-6 text-[#9f6f4e]" size={32} />
+            <h2 className="display text-5xl font-semibold">Unwind in the Sauna</h2>
+            <p className="mt-6 leading-8 text-[#5a4b3d]">
+              After a day discovering the region, slow down in your private SAWO hot rock sauna. Comfortably seating up
+              to four guests, it&apos;s the perfect place to switch off and enjoy the evening together.
             </p>
           </div>
-          <div className="relative min-h-[420px] overflow-hidden rounded-lg">
-            <Image
-              src="/images/exterior-hills-blue-sky.jpeg"
-              alt="White holiday home with lawn and rural hills"
-              fill
-              sizes="(min-width: 1024px) 45vw, 100vw"
-              className="object-cover"
-            />
+          <div className="grid gap-4 sm:grid-cols-2">
+            {["SAWO hot rock sauna", "Seats up to four", "Evening unwind", "Private wellness space"].map((item) => (
+              <div key={item} className="rounded-lg border border-white/15 bg-white/10 p-5 backdrop-blur">
+                <Star className="mb-5 text-[#d9bb8b]" size={20} fill="currentColor" />
+                <p className="font-serif text-2xl font-semibold">{item}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section id="book" className="bg-[#283224] py-20 text-white sm:py-28">
-        <div className="section-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+      <section id="reviews" className="bg-[#fffaf2] py-24 sm:py-32">
+        <div className="section-shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <div>
-            <p className="eyebrow text-[#d9bb8b]">Direct booking</p>
-            <h2 className="display mt-3 text-5xl font-semibold sm:text-6xl">Reserve Your Escape Today</h2>
-            <p className="mt-6 text-lg leading-8 text-white/76">
-              Select your arrival and departure dates from the calendar, add your guest details, and we will come back
-              with pricing and the next steps to secure your stay.
+            <h2 className="display text-5xl font-semibold sm:text-6xl">Guest Reviews</h2>
+            <p className="mt-6 max-w-xl text-lg leading-8 text-[#5a4b3d]">
+              Read what past guests have shared about their stay at Aspin Retreat.
             </p>
-            <div className="mt-8 grid grid-cols-3 gap-3">
-              {["Calendar view", "Booked dates blocked", "Direct enquiry"].map((item) => (
-                <div key={item} className="rounded-lg border border-white/14 bg-white/8 p-4 text-sm font-bold">
-                  {item}
-                </div>
+          </div>
+          <div className="rounded-lg bg-[#181512] p-6 text-white shadow-2xl sm:p-9">
+            <div className="mb-8 flex gap-1 text-[#d9bb8b]">
+              {Array.from({ length: 5 }).map((_, index) => (
+                <Star key={index} size={20} fill="currentColor" />
               ))}
             </div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeReview.name}
+                initial={{ opacity: 0, x: 18 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -18 }}
+                transition={{ duration: 0.28 }}
+              >
+                <p className="font-serif text-3xl leading-tight sm:text-4xl">&ldquo;{activeReview.text}&rdquo;</p>
+                <div className="mt-8">
+                  <p className="font-bold">{activeReview.name}</p>
+                  <p className="text-sm text-white/62">{activeReview.stay}</p>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+            <div className="mt-8 flex gap-3">
+              <button
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 transition hover:bg-white/10"
+                onClick={() => setReviewIndex((reviewIndex - 1 + reviews.length) % reviews.length)}
+                aria-label="Previous review"
+              >
+                <ChevronLeft size={19} />
+              </button>
+              <button
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 transition hover:bg-white/10"
+                onClick={() => setReviewIndex((reviewIndex + 1) % reviews.length)}
+                aria-label="Next review"
+              >
+                <ChevronRight size={19} />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="book" className="bg-[#283224] py-24 text-white sm:py-32">
+        <div className="section-shell grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div>
+            <h2 className="display text-5xl font-semibold sm:text-6xl">Book Your Stay</h2>
+            <p className="mt-6 max-w-xl text-lg leading-8 text-white/76">
+              We look forward to welcoming you to Aspin Retreat. Reserve your stay today and start planning your next
+              Waikato getaway.
+            </p>
           </div>
           <form onSubmit={handleBookingSubmit} className="rounded-lg bg-[#fffaf2] p-5 text-[#221c17] shadow-2xl sm:p-7">
             <div>
@@ -858,59 +794,6 @@ export function HomePage() {
               Send Booking Enquiry
             </button>
           </form>
-        </div>
-      </section>
-
-      <section id="reviews" className="bg-[#fffaf2] py-20 sm:py-28">
-        <div className="section-shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-          <div>
-            <p className="eyebrow">Reviews</p>
-            <h2 className="display mt-3 text-5xl font-semibold sm:text-6xl">
-              Guest Experiences
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-[#5a4b3d]">
-              From family getaways and cycling weekends to corporate retreats and Mystery Creek events, our guests
-              love the comfort, privacy, and stunning rural setting of Aspin Retreat.
-            </p>
-          </div>
-          <div className="rounded-lg bg-[#181512] p-6 text-white shadow-2xl sm:p-9">
-            <div className="mb-8 flex gap-1 text-[#d9bb8b]">
-              {Array.from({ length: 5 }).map((_, index) => (
-                <Star key={index} size={20} fill="currentColor" />
-              ))}
-            </div>
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeReview.name}
-                initial={{ opacity: 0, x: 18 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -18 }}
-                transition={{ duration: 0.28 }}
-              >
-                <p className="font-serif text-3xl leading-tight sm:text-4xl">&ldquo;{activeReview.text}&rdquo;</p>
-                <div className="mt-8">
-                  <p className="font-bold">{activeReview.name}</p>
-                  <p className="text-sm text-white/62">{activeReview.stay}</p>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-            <div className="mt-8 flex gap-3">
-              <button
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 transition hover:bg-white/10"
-                onClick={() => setReviewIndex((reviewIndex - 1 + reviews.length) % reviews.length)}
-                aria-label="Previous review"
-              >
-                <ChevronLeft size={19} />
-              </button>
-              <button
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 transition hover:bg-white/10"
-                onClick={() => setReviewIndex((reviewIndex + 1) % reviews.length)}
-                aria-label="Next review"
-              >
-                <ChevronRight size={19} />
-              </button>
-            </div>
-          </div>
         </div>
       </section>
 
