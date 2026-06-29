@@ -183,7 +183,8 @@ const monthFormatter = new Intl.DateTimeFormat("en-NZ", {
 
 const weekDays = ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"];
 const contactEmail = "aspinretreat@gmail.com";
-const contactPhone = "027296582";
+const contactPhone = "027 296 5824";
+const contactPhoneHref = "0272965824";
 const propertyAddress = "Aspin Road, Cambridge, Waikato, New Zealand";
 const encodedPropertyAddress = encodeURIComponent(propertyAddress);
 
@@ -830,7 +831,7 @@ export function HomePage() {
             <a className="flex items-center gap-3 transition hover:text-[#d9bb8b]" href={`mailto:${contactEmail}`}>
               <Mail size={16} /> {contactEmail}
             </a>
-            <a className="flex items-center gap-3 transition hover:text-[#d9bb8b]" href={`tel:${contactPhone}`}>
+            <a className="flex items-center gap-3 transition hover:text-[#d9bb8b]" href={`tel:${contactPhoneHref}`}>
               <Phone size={16} /> {contactPhone}
             </a>
             <a className="flex items-center gap-3 transition hover:text-[#d9bb8b]" href="#location">
